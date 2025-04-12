@@ -96,7 +96,7 @@
       let url = "http://spartacodingclub.shop/sparta_api/weather/seoul";
       fetch(url).then((res) => res.json()).then((data) => {
           let temp = data['temp'];
-          $("#msg").text("temp");
+          $("#msg").text(temp);
         });
 
       let docs = await getDocs(collection(db, "movies"));
