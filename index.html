@@ -94,15 +94,9 @@
       });
 
       let url = "http://spartacodingclub.shop/sparta_api/weather/seoul";
-      fetch(url)
-        .then((res) => res.json())
-        .then((data) => {
-          let temp = data["temp"];
-          if (temp > 20) {
-            $("#msg").text("더워요");
-          } else {
-            $("#msg").text("추워요");
-          }
+      fetch(url).then((res) => res.json()).then((data) => {
+          let temp = data['temp'];
+          $("#msg").text("temp");
         });
 
       let docs = await getDocs(collection(db, "movies"));
